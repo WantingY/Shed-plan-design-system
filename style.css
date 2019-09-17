@@ -13,7 +13,7 @@ html{
 	--color-text-lighter:#eff2f7;
 }
 /* ==========================================================================
- Typograpgy
+ Typography
 ========================================================================== */
 html{
 	color: var(--color-primary-text);
@@ -30,12 +30,18 @@ a{
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: var(--font-secondary);
+	margin-bottom: 0;
 }
 p{
 	font-family: var(--font-primary);
 }
+.prifont {
+	font-size: 3rem;
+	font-family: var(--font-primary);
+}
+
 /* ==========================================================================
- Header Conmponent
+ Header Component
 ========================================================================== */
 header{
 	background-color: var(--color-blue-grey);
@@ -43,7 +49,7 @@ header{
 }
 
 /* ==========================================================================
- Footer Conmponent
+ Footer Component
 ========================================================================== */
 footer{
 	background-color: var(--color-blue-grey);
