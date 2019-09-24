@@ -5,39 +5,137 @@ html{
 	--color-primary-orange:#fb8c00;
 	--color-orange-light:#ffb74d;
 	--color-orange-dark:#c25e00;
+
 	--color-blue-grey:#37474f;
 	--color-blue-grey-light:#62727b;
 	--color-blue-grey-dark:#102027;
+
 	--color-primary-text:#1f2d3d;
 	--color-text-light:#d3dce6;
 	--color-text-lighter:#eff2f7;
 }
+
 /* ==========================================================================
  Typography
 ========================================================================== */
 html{
 	color: var(--color-primary-text);
-	--font-primary:'open sans',sans-serif;
-	--font-secondary:'Nunito Sans',sans-serif;
+
+	--font-primary:'open sans', sans-serif;
+	--font-secondary:'Turret Road', sans-serif;
+
+	--size-ratio:1.2;
+
+	--size-one-up: calc( 1rem * var(--size-ratio));
+	--size-two-up: calc(var(--size-one-up) * var(--size-ratio));
+	--size-three-up: calc(var(--size-two-up) * var(--size-ratio));
+	--size-four-up: calc(var(--size-three-up) * var(--size-ratio));
+	--size-five-up: calc(var(--size-four-up) * var(--size-ratio));
+	--size-six-up: calc(var(--size-five-up) * var(--size-ratio));
+
+	--size-one-down: calc( 1rem / var(--size-ratio));
+
 	line-height: 1.5;
+	font-family: var(--font-primary);
 }
-main{
-	max-width: 60rem;
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--font-secondary);
+	margin-top: 15%;
+	line-height: .8;
 }
+
+h1 {
+	font-size: var(--size-six-up);
+	font-weight: bolder;
+	color: var(--color-orange-dark);
+}
+
+h2 {
+	font-size: var(--size-five-up);
+	
+}
+
+h3 {
+	font-size: var(--size-four-up);
+	color: var(--color-blue-grey-light);
+}
+
+h4 {
+	font-size: var(--size-three-up);
+}
+
+h5 {
+	font-size: var(--size-two-up);
+}
+
+h6{
+	font-size: var(--size-one-up);
+}
+
+p{
+	font-family: var(--font-primary);
+}
+
 a{
 	color: var(--color-primary-orange);
 	font-family: var(--font-primary);
 }
-h1,h2,h3,h4,h5,h6{
-	font-family: var(--font-secondary);
-	margin-bottom: 0;
-}
-p{
-	font-family: var(--font-primary);
-}
+
+/* font Component */
 .prifont {
 	font-size: 3rem;
 	font-family: var(--font-primary);
+	text-align: center;
+}
+
+.secfont {
+	font-size:3rem;
+	font-family: var(--font-secondary);
+	text-align: center;
+}
+
+.turret {
+	font-family: var(--font-secondary);
+}
+
+/* headings Component */
+.heading-level {
+	text-align: center;
+}
+
+/* body text Component */
+.paragraph-featured {
+	font-size: var(--size-one-up);
+
+}
+
+.paragraph-micro {
+	font-size: var(--size-one-down);
+}
+
+/* list Component */
+.unorderd {
+	list-style-type: square;
+	list-style-position: outside;
+}
+
+.ordered {
+	list-style-position: inside;
+}
+
+/* blockquote Component */
+blockquote {
+	font-size: var(--size-two-up);
+	font-style: italic;
+	border-left: 5px solid var(--color-orange-dark);
+	margin: 0 auto;
+	padding:1em;
+}
+
+cite {
+	font-size: var(--size-one-up);
 }
 
 /* ==========================================================================
@@ -48,34 +146,61 @@ header{
 	padding: 2rem;
 }
 
+header ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+header a:hover {
+	color:var(--color-orange-light);
+}
+
+.site-logo {
+	text-decoration: none;
+	font-size: var(--size-four-up);
+	font-family: var(--font-secondary);
+	text-transform: uppercase;
+}
 /* ==========================================================================
  Footer Component
 ========================================================================== */
 footer{
 	background-color: var(--color-blue-grey);
 	padding: 2rem;
+	font-size: var(--size-one-down);
+	margin-top: 10%;
 }
+
+footer ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+footer a:hover {
+	color:var(--color-orange-light);
+}
+
 footer p{
 	color: var(--color-text-light);
 }
+
+
 /* ==========================================================================
  Master page layout
 ========================================================================== */
+main {
+	margin:3rem auto;
+	max-width: 39rem;
+}
 
-ul li a{
+a {
 	text-decoration: none;
 }
-nav ul li{
-	display: inline-block;
-	padding-right: 10%;
-}
-li{
-	list-style: none;
+
+svg{
+	margin-top: 10%;
 }
 
-ul{
-	padding-left: 0;
-}
 .bodycopylinks{
 	text-decoration: none;
 	color: var(--color-orange-dark);
