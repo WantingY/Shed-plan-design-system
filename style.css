@@ -1,7 +1,7 @@
 /* ==========================================================================
  Colors
 ========================================================================== */
-html{
+html {
 	--color-primary-orange:#fb8c00;
 	--color-orange-light:#ffb74d;
 	--color-orange-dark:#c25e00;
@@ -18,9 +18,7 @@ html{
 /* ==========================================================================
  Typography
 ========================================================================== */
-html{
-	color: var(--color-primary-text);
-
+html {
 	--font-primary:'open sans', sans-serif;
 	--font-secondary:'Turret Road', sans-serif;
 
@@ -35,31 +33,30 @@ html{
 
 	--size-one-down: calc( 1rem / var(--size-ratio));
 
-	line-height: 1.5;
+	color: var(--color-primary-text);
 	font-family: var(--font-primary);
+	line-height: 1.5;
 }
 
-
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-secondary);
-	margin-top: 15%;
 	line-height: .8;
+	margin-top: 15%;
 }
 
 h1 {
+	color: var(--color-orange-dark);
 	font-size: var(--size-six-up);
 	font-weight: bolder;
-	color: var(--color-orange-dark);
 }
 
 h2 {
 	font-size: var(--size-five-up);
-	
 }
 
 h3 {
-	font-size: var(--size-four-up);
 	color: var(--color-blue-grey-light);
+	font-size: var(--size-four-up);	
 }
 
 h4 {
@@ -70,30 +67,33 @@ h5 {
 	font-size: var(--size-two-up);
 }
 
-h6{
+h6 {
 	font-size: var(--size-one-up);
 }
 
-p{
-	font-family: var(--font-primary);
+a {
+	color: var(--color-primary-orange);
+	text-decoration: none;
 }
 
-a{
-	color: var(--color-primary-orange);
-	font-family: var(--font-primary);
-}
+/* ==========================================================================
+ Links states
+========================================================================== */
+
 a:hover {
 	color: var(--color-primary-orange);
 }
 
-/* font Component */
-.prifont {
+/* ==========================================================================
+ Examples
+========================================================================== */
+.primary-font {
 	font-size: 3rem;
 	font-family: var(--font-primary);
 	text-align: center;
 }
 
-.secfont {
+.secondary-font {
 	font-size:3rem;
 	font-family: var(--font-secondary);
 	text-align: center;
@@ -111,7 +111,6 @@ a:hover {
 /* body text Component */
 .paragraph-featured {
 	font-size: var(--size-one-up);
-
 }
 
 .paragraph-micro {
@@ -119,22 +118,40 @@ a:hover {
 }
 
 /* list Component */
-.unorderd {
+section figure ul {
 	list-style-type: square;
 	list-style-position: outside;
+	margin-bottom: 1rem;
 }
 
-.ordered {
+section figure ul li ul li {
+	color: var(--color-orange-dark);
+	font-style: italic;
+}
+
+section figure ol {
 	list-style-position: inside;
+	margin-bottom: 1rem;
+}
+
+section figure ol li ol li {
+	color: var(--color-orange-dark);
+	font-style: italic;
 }
 
 /* blockquote Component */
 blockquote {
+	border-left: 5px solid var(--color-orange-dark);
 	font-size: var(--size-two-up);
 	font-style: italic;
-	border-left: 5px solid var(--color-orange-dark);
 	margin: 0 auto;
 	padding:1em;
+}
+
+.quotation-mark {
+	font-size: 3rem; 
+	line-height: 0.6em; 
+	opacity: 0.2;
 }
 
 cite {
@@ -144,80 +161,161 @@ cite {
 /* ==========================================================================
  Button component
 ========================================================================== */
+
+/* primary button */
+
 .link-button-hero {
 	background-color: var(--color-primary-orange);
+	border:1.5px solid;
+	border-radius: .2rem;
 	color: white;
-	padding: .8rem 3rem;
-	border-radius: .5rem;
+	display: inline-block;
 	font-size: var(--size-one-up);
 	margin-right: 1rem;
-	display: inline-block;
+	padding: .8rem 3rem;	
+}
+
+.link-button-hero:active {
+	background-color: white;
+	border-color: var(--color-primary-orange);
+	box-shadow: 2px 2px 0 var(--color-primary-orange);
 }
 
 .link-button-hero:hover {
-	background-color: var(--color-orange-light);
-	box-shadow: 2.5px 2.5px var(--color-primary-orange);
-}
-.link-button-hero:focus {
-	background-color: var(--color-orange-light);
+	background-color: white;
+	border-color: var(--color-primary-orange);
+	box-shadow: 2px 2px 0 var(--color-primary-orange);
 }
 
 
-.link-button-normal {
-	background-color: var(--color-blue-grey);
+.link-button-hero-secondary-color {
+	background-color: var(--color-orange-dark);
+}
+
+.link-button-hero-secondary-color:hover {
+	background-color: white;
+	border-color: var(--color-orange-dark);
+	box-shadow: 2px 2px 0 var(--color-orange-dark);
+	color: var(--color-orange-dark);
+}
+
+
+.link-button-hero-disable {
+	background-color: var(--color-text-lighter);
+}
+
+.link-button-hero-disable:hover {
+	background-color: var(--color-text-lighter);
+	box-shadow: none;
+	border: none;
 	color: white;
-	padding: .8rem 2.6rem;
-	border-radius: .5rem;
+}
+
+
+/* secondary button */
+.link-button-normal {
+	border-color: var(--color-primary-orange);
+	border: 1.5px solid;
+	border-radius: .2rem;
+	display: inline-block;
 	font-size: var(--size-one-up);
 	margin-right: 1rem;
-	display: inline-block;
-}
-.link-button-normal:hover {
-	background-color: var(--color-blue-grey-light);
-	box-shadow: 2.5px 2.5px var(--color-blue-grey);
-}
-.link-button-normal:focus {
-	background-color: var(--color-blue-grey-light);
+	padding: .8rem 2.6rem;
 }
 
+.link-button-normal:active {
+	background-color: white;
+}
+
+.link-button-normal:hover {
+	box-shadow: 2px 2px 0 var(--color-primary-orange);
+}
+
+.link-button-normal-secondary-color {
+	border-color: var(--color-orange-dark);
+	color: var(--color-orange-dark);
+}
+
+.link-button-normal-secondary-color:hover {
+	box-shadow: 2px 2px 0 var(--color-orange-dark);
+	color: var(--color-orange-dark);
+}
+
+.link-button-normal-disable {
+	border-color: var(--color-text-lighter);
+	color: var(--color-text-lighter);
+}
+
+.link-button-normal-disable:hover {
+	box-shadow: none;
+	color:var(--color-text-lighter);
+}
+
+/* tertiary button */
 
 .link-button-tertiary {
+	border-color: var(--color-blue-grey);
 	border: 1.5px solid;
-	border-radius: .5rem;
-	padding: .8rem 2.6rem;
-	margin-right: 1rem;
+	border-radius: .2rem;
+	color: var(--color-blue-grey);
 	display: inline-block;
+	margin-right: 1rem;
+	padding: .6rem 2rem;
 }
+
+.link-button-tertiary:active {
+	background-color: white;
+}
+
 .link-button-tertiary:hover {
-	box-shadow: 2px 2px;
+	box-shadow: 2px 2px 0 var(--color-blue-grey);
+	color: var(--color-blue-grey);	
 }
-.link-button-tertiary:focus {
-	color: var(--color-orange-light);
+
+.link-button-tertiary-disable {
+	border-color: var(--color-text-lighter);
+	color: var(--color-text-lighter);
+}
+
+.link-button-tertiary-disable:hover {
+	box-shadow: none;
+	color:var(--color-text-lighter);
 }
 
 /* ==========================================================================
  Accordins component
 ========================================================================== */
+
 details {
-	border: 1.5px solid var(--color-primary-orange);
-	border-radius: .5rem;
+	border-bottom: 1px solid var(--color-blue-grey);
 	overflow: hidden;
 }
 
 summary {
-	background-color: var(--color-primary-orange);
-	padding: .5rem;
-	color: white;
+	background-color: white;
+	border-bottom: 1px solid var(--color-blue-grey);
 	font-size: var(--size-one-up);
+	padding: .5rem;
 }
 
-details p {
+summary:focus {
+	background-color: var(--color-blue-grey);
+	color:white;
+}
+
+summary:hover {
+	background-color: var(--color-blue-grey);
+	color:white;
+}
+
+details div {
 	padding-left: .5rem;
 }
+
 /* ==========================================================================
  Header Component
 ========================================================================== */
-header{
+header {
 	background-color: var(--color-blue-grey);
 	padding: 2rem;
 }
@@ -232,20 +330,20 @@ header a:hover {
 }
 
 .site-logo {
-	text-decoration: none;
 	font-size: var(--size-four-up);
 	font-family: var(--font-secondary);
+	text-decoration: none;
 	text-transform: uppercase;
 }
 
 /* ==========================================================================
  Footer Component
 ========================================================================== */
-footer{
+footer {
 	background-color: var(--color-blue-grey);
-	padding: 2rem;
 	font-size: var(--size-one-down);
 	margin-top: 10%;
+	padding: 2rem;
 }
 
 footer ul {
@@ -257,10 +355,9 @@ footer a:hover {
 	color:var(--color-orange-light);
 }
 
-footer p{
+footer p {
 	color: var(--color-text-light);
 }
-
 
 /* ==========================================================================
  Master page layout
@@ -270,15 +367,11 @@ main {
 	max-width: 39rem;
 }
 
-a {
-	text-decoration: none;
-}
-
-svg{
+svg {
 	margin-top: 10%;
 }
 
-.bodycopylinks{
-	text-decoration: none;
+.bodycopylinks {
 	color: var(--color-orange-dark);
+	text-decoration: none;	
 }
