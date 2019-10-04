@@ -4,7 +4,7 @@
 html {
 	--color-primary-orange:#fb8c00;
 	--color-orange-light:#ffb74d;
-	--color-orange-dark:#c25e00;
+	--color-orange-dark:#D76D00;
 
 	--color-blue-grey:#37474f;
 	--color-blue-grey-light:#62727b;
@@ -287,13 +287,13 @@ cite {
 ========================================================================== */
 
 details {
-	border-bottom: 1px solid var(--color-blue-grey);
+	border-bottom: .8px solid var(--color-blue-grey);
 	overflow: hidden;
 }
 
 summary {
 	background-color: white;
-	border-bottom: 1px solid var(--color-blue-grey);
+	border-bottom: .8px solid var(--color-blue-grey);
 	font-size: var(--size-one-up);
 	padding: .5rem;
 }
@@ -312,6 +312,76 @@ details div {
 	padding-left: .5rem;
 }
 
+
+/* ==========================================================================
+ Modal dialog component
+========================================================================== */
+
+button {
+	background-color: var(--color-primary-orange);
+	border:1.5px solid;
+	border-radius: .2rem;
+	color: white;
+	display: inline-block;
+	font-size: var(--size-one-up);
+	margin-right: 1rem;
+	padding: .8rem 3rem;
+}
+
+button:active {
+	background-color: white;
+	border-color: var(--color-primary-orange);
+	box-shadow: 2px 2px 0 var(--color-primary-orange);
+}
+
+button:hover {
+	background-color: white;
+	border-color: var(--color-primary-orange);
+	box-shadow: 2px 2px 0 var(--color-primary-orange);
+	color: var(--color-primary-orange);
+}
+
+dialog {
+	border: none;
+	border-radius: .1rem;
+	border-top: 3rem solid var(--color-blue-grey);
+	box-shadow: 6px 6px 0px var(--color-primary-orange);
+	max-width: 30rem;
+	padding: 3rem;
+}
+
+dialog::backdrop {
+	animation: img-fade .8s ease-out;
+	background-image: url(images/vector-tools-icon-set.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(5px);
+}
+
+dialog[open] {
+	animation: fade-in .8s;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: scale(.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes img-fade {
+	0% {
+		opacity: .9;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
 /* ==========================================================================
  Header Component
 ========================================================================== */

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Component</title>
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Turret+Road:400,800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Turret+Road:400&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -30,21 +30,20 @@
 		<figure>
 			<a href="" class="link-button-hero">Button</a>
 			<a href="" class="link-button-hero link-button-hero-secondary-color">Button</a>
-			<a href="" class="link-button-hero link-button-hero-disable">Button</a>
+			<a href="" class="link-button-hero link-button-hero-disable">Disable</a>
 		</figure>
 
 		<h4>Secondary Buttons</h4>
 		<figure>
 			<a href="" class="link-button-normal">Button</a>
 			<a href="" class="link-button-normal link-button-normal-secondary-color">Button</a>
-			<a href="" class="link-button-normal link-button-normal-disable">Button</a>
+			<a href="" class="link-button-normal link-button-normal-disable">Disable</a>
 		</figure>
 		
 		<h4>Tertiary Buttons</h4>
 		<figure>
 			<a href="" class="link-button-tertiary">Button</a>
-			<a href="" class="link-button-tertiary link-button-tertiary-disable">Button</a>
-
+			<a href="" class="link-button-tertiary link-button-tertiary-disable">Disable</a>
 		</figure>
 		
 
@@ -81,6 +80,17 @@
 				</div>
 			</details>
 		</figure>
+
+		<h3>Modal Dialog</h3>
+
+		<figure>
+			<button id="open-modal" type="button">Open Modal</button>
+
+			<dialog id="modal-demo">
+				<h4>Heading</h4>
+				<p>These example sentences are selected automatically from various online news sources to reflect current usage of the word 'toolshed.</p>
+			</dialog>
+		</figure>
 		
 	</main>
 
@@ -96,5 +106,25 @@
 		</nav>
 		<p>&copy 2019 Wanting Y. All copyright reserved.</p>
 	</footer>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+
+	const modal = document.querySelector('dialog');
+	const open = document.getElementById('open-modal');
+
+	open.addEventListener('click', () => {
+	modal.showModal();
+	});
+
+	modal.addEventListener('click', event => {
+	if (event.target === modal) {
+	modal.close('cancelled');
+	}
+	});
+
+	});
+</script>
+
 </body>
 </html>
