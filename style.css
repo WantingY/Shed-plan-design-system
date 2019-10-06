@@ -167,6 +167,7 @@ cite {
 .link-button-hero {
 	background-color: var(--color-primary-orange);
 	border:1.5px solid;
+	border-color: var(--color-primary-orange);
 	border-radius: .2rem;
 	color: white;
 	display: inline-block;
@@ -190,6 +191,7 @@ cite {
 
 .link-button-hero-secondary-color {
 	background-color: var(--color-orange-dark);
+	border-color: var(--color-orange-dark);
 }
 
 .link-button-hero-secondary-color:hover {
@@ -202,6 +204,7 @@ cite {
 
 .link-button-hero-disable {
 	background-color: var(--color-text-light);
+	border-color: var(--color-text-light);
 }
 
 .link-button-hero-disable:hover {
@@ -220,7 +223,7 @@ cite {
 	display: inline-block;
 	font-size: var(--size-one-up);
 	margin-right: 1rem;
-	padding: .8rem 2.6rem;
+	padding: .8rem 3rem;
 }
 
 .link-button-normal:active {
