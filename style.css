@@ -80,6 +80,14 @@ a {
  Links states
 ========================================================================== */
 
+a:active {
+	color: var(--color-orange-dark);
+}
+
+a:focus {
+	color: var(--color-orange-dark);
+}
+
 a:hover {
 	color: var(--color-primary-orange);
 }
@@ -182,6 +190,10 @@ cite {
 	box-shadow: 2px 2px 0 var(--color-primary-orange);
 }
 
+.link-button-hero:focus {
+	background-color: white;
+}
+
 .link-button-hero:hover {
 	background-color: white;
 	border-color: var(--color-primary-orange);
@@ -230,6 +242,10 @@ cite {
 	background-color: white;
 }
 
+.link-button-normal:focus {
+	background-color: white;
+}
+
 .link-button-normal:hover {
 	box-shadow: 2px 2px 0 var(--color-primary-orange);
 }
@@ -272,6 +288,10 @@ cite {
 	box-shadow:2px 2px 0 var(--color-blue-grey);
 }
 
+.link-button-tertiary:focus {
+	background-color: white;
+}
+
 .link-button-tertiary:hover {
 	background-color: white;
 	border-color: var(--color-blue-grey);
@@ -286,6 +306,10 @@ cite {
 
 .link-button-tertiary-secondary:active {
 	background-color: white;
+}
+
+.link-button-tertiary-secondary:focus {
+
 }
 
 .link-button-tertiary-seconday:hover {
@@ -316,7 +340,6 @@ details {
 
 summary {
 	background-color: white;
-	border-bottom: .8px solid var(--color-blue-grey);
 	font-size: var(--size-one-up);
 	padding: .5rem;
 }
