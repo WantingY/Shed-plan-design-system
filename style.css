@@ -252,33 +252,53 @@ cite {
 }
 
 /* tertiary button */
-
 .link-button-tertiary {
-	border-color: var(--color-blue-grey);
+	background-color: var(--color-blue-grey);
 	border: 1.5px solid;
+	border-color: var(--color-blue-grey);
 	border-radius: .2rem;
-	color: var(--color-blue-grey);
+	color: white;
 	display: inline-block;
 	margin-right: 1rem;
-	padding: .6rem 2rem;
+	padding: .5rem 1.8rem;
 }
 
 .link-button-tertiary:active {
 	background-color: white;
+	border-color: var(--color-blue-grey): 
+	box-shadow:2px 2px 0 var(--color-blue-grey);
 }
 
 .link-button-tertiary:hover {
+	background-color: white;
+	border-color: var(--color-blue-grey);
+	box-shadow: 2px 2px 0 var(--color-blue-grey);
+	color: var(--color-blue-grey);
+}
+
+.link-button-tertiary-secondary {
+	background-color: white;
+	color: var(--color-blue-grey);
+}
+
+.link-button-tertiary-secondary:active {
+	background-color: white;
+}
+
+.link-button-tertiary-seconday:hover {
 	box-shadow: 2px 2px 0 var(--color-blue-grey);
 	color: var(--color-blue-grey);	
 }
 
 .link-button-tertiary-disable {
+	background-color: white;
 	border-color: var(--color-text-light);
 	color: var(--color-text-light);
 }
 
 .link-button-tertiary-disable:hover {
 	box-shadow: none;
+	border-color: var(--color-text-light);
 	color:var(--color-text-light);
 }
 
