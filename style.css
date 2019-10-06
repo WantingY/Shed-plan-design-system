@@ -201,11 +201,11 @@ cite {
 
 
 .link-button-hero-disable {
-	background-color: var(--color-text-lighter);
+	background-color: var(--color-text-light);
 }
 
 .link-button-hero-disable:hover {
-	background-color: var(--color-text-lighter);
+	background-color: var(--color-text-light);
 	box-shadow: none;
 	border: none;
 	color: white;
@@ -242,13 +242,13 @@ cite {
 }
 
 .link-button-normal-disable {
-	border-color: var(--color-text-lighter);
-	color: var(--color-text-lighter);
+	border-color: var(--color-text-light);
+	color: var(--color-text-light);
 }
 
 .link-button-normal-disable:hover {
 	box-shadow: none;
-	color:var(--color-text-lighter);
+	color:var(--color-text-light);
 }
 
 /* tertiary button */
@@ -273,13 +273,13 @@ cite {
 }
 
 .link-button-tertiary-disable {
-	border-color: var(--color-text-lighter);
-	color: var(--color-text-lighter);
+	border-color: var(--color-text-light);
+	color: var(--color-text-light);
 }
 
 .link-button-tertiary-disable:hover {
 	box-shadow: none;
-	color:var(--color-text-lighter);
+	color:var(--color-text-light);
 }
 
 /* ==========================================================================
