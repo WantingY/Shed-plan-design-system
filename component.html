@@ -92,6 +92,71 @@
 				<p>These example sentences are selected automatically from various online news sources to reflect current usage of the word 'toolshed.</p>
 			</dialog>
 		</figure>
+
+		<h3>Form Inputs</h3>
+		<form action="">
+			<h4>Text Input Label</h4>
+			<figure>
+				<label for="text">Text Input Label</label>
+				<input type="text" id="text" name="text" placeholder="Placeholder text" required>
+
+				<label for="text">Text Input Label with help text</label> 
+				<small class="help-text">Instruction Text</small>
+				<input type="text" id="text" name="text" placeholder="Placeholder text" required>
+			
+				<label for="text">Text Input Label Error</label>
+				<input type="text" id="text" name="text" class="error">
+				<p class="error-message">Oops, something went wrong!</p>
+			
+				<label for="text">Text Input Label Disable</label>
+				<input type="text" id="text" name="text" disabled>
+			</figure>
+
+			<h4>Textarea Label</h4>
+			<figure>
+				<label for="textarea">Textarea Label</label>
+				<textarea id="textarea" name="textarea" placeholder="Placeholder text"></textarea>
+
+				<label for="textarea">Textarea Label Error</label>
+				<textarea id="textarea" name="textarea" class="error"></textarea>
+				<p class="error-message">Oops, something went wrong!</p>
+
+				<label for="textarea">Textarea Label Disable</label>
+				<textarea id="textarea" name="textarea" disabled></textarea>
+			</figure>
+
+			<h4>Select Label</h4>
+			<figure>
+				<label for="select">Select Label</label>
+				<select id="select" name="select" required>
+					<option value="" disabled hidden selected>Choose an option</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+					<option>Option 4</option>
+				</select>
+
+				<label for="select">Select Label Error</label>
+				<select id="select" name="select" class="error">
+					<option value="" disabled hidden selected>Choose an option</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+					<option>Option 4</option>
+				</select>
+				<p class="error-message">Oops! You forgot to choose one.</p>
+
+				<label for="select">Select Label Disable</label>
+				<select id="select" name="select" class="select-disable" disabled>
+					<option value="" disabled hidden selected>Choose an option</option>
+				</select>
+			</figure>
+
+			<h4>Submit / Button</h4>	
+			<figure>
+				<input type="submit" value="Submit">
+			</figure>
+		</form>
 		
 	</main>
 

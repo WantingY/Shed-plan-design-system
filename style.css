@@ -2,27 +2,31 @@
  Colors
 ========================================================================== */
 html {
-	--color-primary-orange:#fb8c00;
-	--color-orange-light:#ffb74d;
-	--color-orange-dark:#D76D00;
+	--color-primary-orange: #fb8c00;
+	--color-orange-light: #ffb74d;
+	--color-orange-dark: #D76D00;
 
-	--color-blue-grey:#37474f;
-	--color-blue-grey-light:#62727b;
-	--color-blue-grey-dark:#102027;
+	--color-blue-grey: #37474f;
+	--color-blue-grey-light: #62727b;
+	--color-blue-grey-dark: #102027;
 
-	--color-primary-text:#1f2d3d;
-	--color-text-light:#d3dce6;
-	--color-text-lighter:#eff2f7;
+	--color-primary-text: #1f2d3d;
+	--color-text-light: #d3dce6;
+	--color-text-lighter: #eff2f7;
+
+	--color-box-shadow: 2px 2px 0;
+
+	--button-border: 1.5px solid;
 }
 
 /* ==========================================================================
  Typography
 ========================================================================== */
 html {
-	--font-primary:'open sans', sans-serif;
-	--font-secondary:'Turret Road', sans-serif;
+	--font-primary: 'open sans', sans-serif;
+	--font-secondary: 'Turret Road', sans-serif;
 
-	--size-ratio:1.2;
+	--size-ratio: 1.2;
 
 	--size-one-up: calc( 1rem * var(--size-ratio));
 	--size-two-up: calc(var(--size-one-up) * var(--size-ratio));
@@ -102,7 +106,7 @@ a:hover {
 }
 
 .secondary-font {
-	font-size:3rem;
+	font-size: 3rem;
 	font-family: var(--font-secondary);
 	text-align: center;
 }
@@ -153,7 +157,7 @@ blockquote {
 	font-size: var(--size-two-up);
 	font-style: italic;
 	margin: 0 auto;
-	padding:1em;
+	padding: 1em;
 }
 
 .quotation-mark {
@@ -169,12 +173,11 @@ cite {
 /* ==========================================================================
  Button component
 ========================================================================== */
-
 /* primary button */
 
 .link-button-hero {
 	background-color: var(--color-primary-orange);
-	border:1.5px solid;
+	border: var(--button-border);
 	border-color: var(--color-primary-orange);
 	border-radius: .2rem;
 	color: white;
@@ -187,17 +190,17 @@ cite {
 .link-button-hero:active {
 	background-color: white;
 	border-color: var(--color-primary-orange);
-	box-shadow: 2px 2px 0 var(--color-primary-orange);
+	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
 }
 
-.link-button-hero:focus {
+.link-button-hero:focus, .link-button-normal:focus, .link-button-tertiary:focus, .link-button-tertiary-secondary:focus {
 	background-color: white;
 }
 
 .link-button-hero:hover {
 	background-color: white;
 	border-color: var(--color-primary-orange);
-	box-shadow: 2px 2px 0 var(--color-primary-orange);
+	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
 }
 
 
@@ -209,7 +212,7 @@ cite {
 .link-button-hero-secondary-color:hover {
 	background-color: white;
 	border-color: var(--color-orange-dark);
-	box-shadow: 2px 2px 0 var(--color-orange-dark);
+	box-shadow: var(--color-box-shadow) var(--color-orange-dark);
 	color: var(--color-orange-dark);
 }
 
@@ -230,7 +233,7 @@ cite {
 /* secondary button */
 .link-button-normal {
 	border-color: var(--color-primary-orange);
-	border: 1.5px solid;
+	border: var(--button-border);
 	border-radius: .2rem;
 	display: inline-block;
 	font-size: var(--size-one-up);
@@ -238,16 +241,12 @@ cite {
 	padding: .8rem 3rem;
 }
 
-.link-button-normal:active {
-	background-color: white;
-}
-
-.link-button-normal:focus {
+.link-button-normal:active, .link-button-tertiary-secondary:active {
 	background-color: white;
 }
 
 .link-button-normal:hover {
-	box-shadow: 2px 2px 0 var(--color-primary-orange);
+	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
 }
 
 .link-button-normal-secondary-color {
@@ -256,7 +255,7 @@ cite {
 }
 
 .link-button-normal-secondary-color:hover {
-	box-shadow: 2px 2px 0 var(--color-orange-dark);
+	box-shadow: var(--color-box-shadow) var(--color-orange-dark);
 	color: var(--color-orange-dark);
 }
 
@@ -265,15 +264,15 @@ cite {
 	color: var(--color-text-light);
 }
 
-.link-button-normal-disable:hover {
+.link-button-normal-disable:hover, .link-button-tertiary-disable:hover {
 	box-shadow: none;
-	color:var(--color-text-light);
+	color: var(--color-text-light);
 }
 
 /* tertiary button */
 .link-button-tertiary {
 	background-color: var(--color-blue-grey);
-	border: 1.5px solid;
+	border: var(--button-border);
 	border-color: var(--color-blue-grey);
 	border-radius: .2rem;
 	color: white;
@@ -285,17 +284,13 @@ cite {
 .link-button-tertiary:active {
 	background-color: white;
 	border-color: var(--color-blue-grey): 
-	box-shadow:2px 2px 0 var(--color-blue-grey);
-}
-
-.link-button-tertiary:focus {
-	background-color: white;
+	box-shadow: var(--color-box-shadow) var(--color-blue-grey);
 }
 
 .link-button-tertiary:hover {
 	background-color: white;
 	border-color: var(--color-blue-grey);
-	box-shadow: 2px 2px 0 var(--color-blue-grey);
+	box-shadow: var(--color-box-shadow) var(--color-blue-grey);
 	color: var(--color-blue-grey);
 }
 
@@ -304,16 +299,8 @@ cite {
 	color: var(--color-blue-grey);
 }
 
-.link-button-tertiary-secondary:active {
-	background-color: white;
-}
-
-.link-button-tertiary-secondary:focus {
-
-}
-
 .link-button-tertiary-seconday:hover {
-	box-shadow: 2px 2px 0 var(--color-blue-grey);
+	box-shadow: var(--color-box-shadow) var(--color-blue-grey);
 	color: var(--color-blue-grey);	
 }
 
@@ -326,7 +313,7 @@ cite {
 .link-button-tertiary-disable:hover {
 	box-shadow: none;
 	border-color: var(--color-text-light);
-	color:var(--color-text-light);
+	color: var(--color-text-light);
 }
 
 /* ==========================================================================
@@ -344,14 +331,9 @@ summary {
 	padding: .5rem;
 }
 
-summary:focus {
+summary:focus, summary:hover {
 	background-color: var(--color-blue-grey);
-	color:white;
-}
-
-summary:hover {
-	background-color: var(--color-blue-grey);
-	color:white;
+	color: white;
 }
 
 details div {
@@ -362,29 +344,31 @@ details div {
 /* ==========================================================================
  Modal dialog component
 ========================================================================== */
-
 button {
 	background-color: var(--color-primary-orange);
-	border:1.5px solid;
+	border: var(--button-border);
 	border-radius: .2rem;
 	color: white;
-	display: inline-block;
 	font-size: var(--size-one-up);
-	margin-right: 1rem;
 	padding: .8rem 3rem;
 }
 
 button:active {
 	background-color: white;
 	border-color: var(--color-primary-orange);
-	box-shadow: 2px 2px 0 var(--color-primary-orange);
+	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
 }
 
 button:hover {
 	background-color: white;
 	border-color: var(--color-primary-orange);
-	box-shadow: 2px 2px 0 var(--color-primary-orange);
+	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
 	color: var(--color-primary-orange);
+}
+
+button:focus {
+	box-shadow: none;
+	outline: none;
 }
 
 dialog {
@@ -400,7 +384,6 @@ dialog::backdrop {
 	animation: img-fade .8s ease-out;
 	background-image: url(images/vector-tools-icon-set.jpg);
 	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
 	filter: blur(5px);
 }
@@ -427,6 +410,92 @@ dialog[open] {
 	100% {
 		opacity: 1;
 	}
+}
+
+/* ==========================================================================
+ Form component
+========================================================================== */
+input, select, textarea {
+	border: var(--button-border) var(--color-blue-grey);
+	border-radius: .2rem;
+	box-sizing: border-box;
+	display: block;
+	font-size: 1rem;
+	margin: 0.5rem 0 0;
+	min-width: 60%;
+	padding: .8rem;
+	-webkit-appearance:none;
+}
+
+select {
+	border: none;
+	background-color: var(--color-blue-grey);
+	color: white;
+}
+
+textarea {
+	min-height: 7rem;
+}
+
+input:focus, textarea:focus {
+	background-color: hsl(36, 100%, 95%);
+	outline: none;
+}
+
+select:focus {
+	outline: none;
+}
+
+label {
+	display: block;
+	margin: 2rem 0 0;
+}
+
+.help-text {
+	color: var(--color-orange-light);
+	display: block;
+}
+
+.error {
+	border: 1.5px solid red;
+}
+
+.error-message {
+	color: red;
+	margin-top: 0;
+}
+
+.select-disable {
+	background-color: var(--color-text-light);
+}
+
+input[type="submit"] {
+	background-color: var(--color-primary-orange);
+	border: var(--button-border);
+	border-radius: .2rem;
+	color: white;
+	font-size: var(--size-one-up);
+	min-width: inherit;
+	padding: .8rem 3rem;
+}
+
+input[type="submit"]:hover {
+	background-color: white;
+	border-color: var(--color-primary-orange);
+	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
+	color: var(--color-primary-orange);
+	cursor: pointer;
+}
+
+input[type="submit"]:active {
+	background-color: var(--color-primary-orange);
+	color: white;
+	cursor: pointer;
+}
+
+input[type="submit"]:focus {
+	box-shadow: none;
+	outline: none;
 }
 /* ==========================================================================
  Header Component
