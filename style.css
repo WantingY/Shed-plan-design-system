@@ -80,46 +80,6 @@ a {
 	text-decoration: none;
 }
 
-/* ==========================================================================
- Links states
-========================================================================== */
-
-a:active {
-	color: var(--color-orange-dark);
-}
-
-a:focus {
-	color: var(--color-orange-dark);
-}
-
-a:hover {
-	color: var(--color-primary-orange);
-}
-
-/* ==========================================================================
- Examples
-========================================================================== */
-.primary-font {
-	font-size: 3rem;
-	font-family: var(--font-primary);
-	text-align: center;
-}
-
-.secondary-font {
-	font-size: 3rem;
-	font-family: var(--font-secondary);
-	text-align: center;
-}
-
-.turret {
-	font-family: var(--font-secondary);
-}
-
-/* headings Component */
-.heading-level {
-	text-align: center;
-}
-
 /* body text Component */
 .paragraph-featured {
 	font-size: var(--size-one-up);
@@ -168,6 +128,46 @@ blockquote {
 
 cite {
 	font-size: var(--size-one-up);
+}
+
+/* ==========================================================================
+ Links states
+========================================================================== */
+
+a:active {
+	color: var(--color-orange-dark);
+}
+
+a:focus {
+	color: var(--color-orange-dark);
+}
+
+a:hover {
+	color: var(--color-primary-orange);
+}
+
+/* ==========================================================================
+ Examples
+========================================================================== */
+.primary-font {
+	font-size: 3rem;
+	font-family: var(--font-primary);
+	text-align: center;
+}
+
+.secondary-font {
+	font-size: 3rem;
+	font-family: var(--font-secondary);
+	text-align: center;
+}
+
+.turret {
+	font-family: var(--font-secondary);
+}
+
+/* headings Component */
+.heading-level {
+	text-align: center;
 }
 
 /* ==========================================================================
@@ -317,7 +317,7 @@ cite {
 }
 
 /* ==========================================================================
- Accordins component
+ Accordin component
 ========================================================================== */
 
 details {
@@ -344,32 +344,6 @@ details div {
 /* ==========================================================================
  Modal dialog component
 ========================================================================== */
-button {
-	background-color: var(--color-primary-orange);
-	border: var(--button-border);
-	border-radius: .2rem;
-	color: white;
-	font-size: var(--size-one-up);
-	padding: .8rem 3rem;
-}
-
-button:active {
-	background-color: white;
-	border-color: var(--color-primary-orange);
-	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
-}
-
-button:hover {
-	background-color: white;
-	border-color: var(--color-primary-orange);
-	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
-	color: var(--color-primary-orange);
-}
-
-button:focus {
-	box-shadow: none;
-	outline: none;
-}
 
 dialog {
 	border: none;
@@ -469,7 +443,7 @@ label {
 	background-color: var(--color-text-light);
 }
 
-input[type="submit"] {
+button, input[type="submit"] {
 	background-color: var(--color-primary-orange);
 	border: var(--button-border);
 	border-radius: .2rem;
@@ -479,7 +453,7 @@ input[type="submit"] {
 	padding: .8rem 3rem;
 }
 
-input[type="submit"]:hover {
+button:hover, input[type="submit"]:hover {
 	background-color: white;
 	border-color: var(--color-primary-orange);
 	box-shadow: var(--color-box-shadow) var(--color-primary-orange);
@@ -487,16 +461,17 @@ input[type="submit"]:hover {
 	cursor: pointer;
 }
 
-input[type="submit"]:active {
+button:active, input[type="submit"]:active {
 	background-color: var(--color-primary-orange);
 	color: white;
 	cursor: pointer;
 }
 
-input[type="submit"]:focus {
+button:focus, input[type="submit"]:focus {
 	box-shadow: none;
 	outline: none;
 }
+
 /* ==========================================================================
  Header Component
 ========================================================================== */
@@ -547,6 +522,9 @@ footer p {
 /* ==========================================================================
  Master page layout
 ========================================================================== */
+body {
+	margin: 0;
+}
 main {
 	margin:3rem auto;
 	max-width: 39rem;
