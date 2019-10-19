@@ -130,6 +130,17 @@ cite {
 	font-size: var(--size-one-up);
 }
 
+@media (min-width: 800px) {
+	html {
+		--size-ratio: 1.3;
+		line-height: 1.5;
+	}
+}
+@media (min-width: 1180px) {
+	html {
+		font-size: 18px;
+	}
+}
 /* ==========================================================================
  Links states
 ========================================================================== */
@@ -183,7 +194,7 @@ a:hover {
 	color: white;
 	display: inline-block;
 	font-size: var(--size-one-up);
-	margin-right: 1rem;
+	margin: 2%;
 	padding: .8rem 3rem;	
 }
 
@@ -237,7 +248,7 @@ a:hover {
 	border-radius: .2rem;
 	display: inline-block;
 	font-size: var(--size-one-up);
-	margin-right: 1rem;
+	margin: 2%;
 	padding: .8rem 3rem;
 }
 
@@ -277,7 +288,7 @@ a:hover {
 	border-radius: .2rem;
 	color: white;
 	display: inline-block;
-	margin-right: 1rem;
+	margin: 2%;
 	padding: .5rem 1.8rem;
 }
 
@@ -479,16 +490,6 @@ header {
 	background-color: var(--color-blue-grey);
 	padding: 2rem;
 }
-
-header ul {
-	list-style: none;
-	padding-left: 0;
-}
-
-header a:hover {
-	color:var(--color-orange-light);
-}
-
 .site-logo {
 	font-size: var(--size-four-up);
 	font-family: var(--font-secondary);
@@ -496,6 +497,100 @@ header a:hover {
 	text-transform: uppercase;
 }
 
+/* ==========================================================================
+ Navigation Component
+========================================================================== */
+
+/* primary nav */
+.page-nav {
+	background-color: var(--color-blue-grey);
+}
+.page-nav ul {
+	padding: 0;
+}
+.page-nav li {
+	list-style: none;
+}
+.page-nav a {
+	border-bottom: 1px solid var(--color-orange-light);
+	display: block;
+	padding: 1.2rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.page-nav a:hover {
+	border-bottom: 3px solid var(--color-orange-light);
+	color:var(--color-orange-light);
+}
+.page-nav a:active {
+	color:var(--color-primary-orange);
+}
+.page-nav a:focus {
+	color:var(--color-orange-light);
+}
+.current-page {
+	color: var(--color-orange-light);
+}	
+.page-nav a.current-page {
+	border-bottom: 3px solid var(--color-orange-light);
+}
+
+@media (min-width: 600px) {
+	.page-nav li {
+		display: inline;
+	}
+	.page-nav a {
+		border: none;
+		display: inline-block;
+	}
+}
+
+@media (max-width: 600px) {
+	.page-nav a.current-page {
+		background-color: var(--color-orange-light);
+		border: none;
+		color: white;
+	}
+	.page-nav a:hover {
+		border-bottom: 1px solid var(--color-orange-light);
+		background-color: var(--color-orange-light);
+		color: white;
+	}
+}
+
+/* secondary nav */
+.secondary-nav {
+	background-color: var(--color-blue-grey);
+	max-width: 350px;
+}
+.secondary-nav ul {
+	padding: 0;
+}
+.secondary-nav li {
+	list-style: none;
+	text-transform: uppercase;
+}
+.secondary-nav a{
+	display: block;
+	padding: 1.2rem;
+	text-decoration: none;
+}
+.secondary-nav-nested {
+	background-color: var(--color-blue-grey-light);
+}
+.secondary-nav-nested li {
+	text-transform: capitalize;
+}
+.secondary-nav-nested a:hover {
+	background-color: var(--color-orange-light);
+	color: white;
+}
+.secondary-nav-nested a:active {
+	background-color: var(--color-primary-orange);
+}
+.secondary-nav-nested a:focus {
+	background-color: var(--color-orange-light);
+}
 /* ==========================================================================
  Footer Component
 ========================================================================== */
@@ -510,7 +605,9 @@ footer ul {
 	list-style: none;
 	padding-left: 0;
 }
-
+footer a {
+	padding: .5rem;
+}
 footer a:hover {
 	color:var(--color-orange-light);
 }
@@ -518,7 +615,11 @@ footer a:hover {
 footer p {
 	color: var(--color-text-light);
 }
-
+@media (min-width: 600px) {
+	footer li {
+		display: inline;
+	}
+}
 /* ==========================================================================
  Master page layout
 ========================================================================== */
@@ -527,7 +628,7 @@ body {
 }
 main {
 	margin:3rem auto;
-	max-width: 39rem;
+	max-width: 43rem;
 }
 
 svg {
