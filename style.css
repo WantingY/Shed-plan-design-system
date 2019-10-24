@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Racing+Sans+One&display=swap');
 /* ==========================================================================
  Colors
 ========================================================================== */
@@ -24,7 +26,8 @@ html {
 ========================================================================== */
 html {
 	--font-primary: 'open sans', sans-serif;
-	--font-secondary: 'Turret Road', sans-serif;
+	--font-secondary: 'Racing Sans One', cursive;
+
 
 	--size-ratio: 1.2;
 
@@ -504,7 +507,7 @@ input[type="radio"] {
 	outline: none;
 	opacity: .8;
 	transition: opacity .2s;
-	width: 100%;
+	width: 60%;
 	-webkit-appearance: none;
 }
 
@@ -568,23 +571,23 @@ header {
 	text-transform: uppercase;
 }
 .page-nav a:hover {
-	border-bottom: 3px solid var(--color-orange-light);
-	color:var(--color-orange-light);
-}
+		border-left: 3px solid var(--color-orange-light);
+		color: var(--color-orange-light);
+	}
 .page-nav a:active {
-	color:var(--color-primary-orange);
+	color: var(--color-primary-orange);
 }
 .page-nav a:focus {
-	color:var(--color-orange-light);
+	color: var(--color-orange-light);
 }
 .current-page {
 	color: var(--color-orange-light);
-}	
+}
 .page-nav a.current-page {
-	border-bottom: 3px solid var(--color-orange-light);
+	border-left: 3px solid var(--color-orange-light);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
 	.page-nav li {
 		display: inline;
 	}
@@ -592,21 +595,16 @@ header {
 		border: none;
 		display: inline-block;
 	}
-}
-
-@media (max-width: 600px) {
-	.page-nav a.current-page {
-		background-color: var(--color-orange-light);
-		border: none;
-		color: white;
-	}
 	.page-nav a:hover {
-		border-bottom: 1px solid var(--color-orange-light);
-		background-color: var(--color-orange-light);
-		color: white;
+		border-left: none;
+		border-bottom: 3px solid var(--color-orange-light);
+		color: var(--color-orange-light);
+	}
+	.page-nav a.current-page {
+		border-left: none;
+		border-bottom: 3px solid var(--color-orange-light);
 	}
 }
-
 /* secondary nav */
 .secondary-nav {
 	background-color: var(--color-blue-grey);
