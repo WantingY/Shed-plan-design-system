@@ -29,7 +29,7 @@ html {
 	--font-secondary: 'Racing Sans One', cursive;
 
 
-	--size-ratio: 1.2;
+	--size-ratio: 1.1;
 
 	--size-one-up: calc( 1rem * var(--size-ratio));
 	--size-two-up: calc(var(--size-one-up) * var(--size-ratio));
