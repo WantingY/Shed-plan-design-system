@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Racing+Sans+One&display=swap');
 /* ==========================================================================
  Colors
 ========================================================================== */
@@ -638,6 +638,78 @@ header {
 .secondary-nav-nested a:focus {
 	background-color: var(--color-orange-light);
 }
+/* ==========================================================================
+ Notification Component
+========================================================================== */
+.notification {
+	align-items: center;
+	background-color: var(--color-blue-grey);
+	display: flex;
+	flex-direction: row;
+	padding-left: 1rem;
+}
+.notification-text-wrap {
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 1rem;
+}
+.notification-title {
+	color: var(--color-primary-orange);
+	font-weight: bolder;
+	padding-right: 1rem;
+}
+.notification-error {
+	border-left: 5px solid #fa4d56;
+}
+.notification-warning {
+	border-left: 5px solid #f1c21b;
+}
+.notification-info {
+	border-left: 5px solid #4589ff;
+}
+.notification-success {
+	border-left: 5px solid #42be65;
+}
+.material-icons.error-color {
+	color: #fa4d56;
+}
+.material-icons.warning-color {
+	color: #f1c21b;
+}
+.material-icons.success-color {
+	color: #42be65;
+}
+
+/* ==========================================================================
+ Hero block Component
+========================================================================== */
+.hero-image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../wanting_design_system_5-1/images/main_image.png);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh; 
+}
+
+.hero-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.hero-text h1, .hero-text{
+	color: var(--color-primary-orange);
+ }
+
+ .screenshot img {
+ 	max-width: 100%;
+ }
+
+
 /* ==========================================================================
  Footer Component
 ========================================================================== */
