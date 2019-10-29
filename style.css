@@ -685,23 +685,24 @@ header {
  Hero block Component
 ========================================================================== */
 .hero-image {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../wanting_design_system_5-1/images/main_image.png);
+	align-items: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../wanting_design_system_5-1/images/main_image.jpeg);
 	background-position: center;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 	min-height: 100vh; 
 }
 
 .hero-text {
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 }
-.hero-text h1, .hero-text{
+
+.hero-text h1, .hero-text {
 	color: var(--color-primary-orange);
  }
 
