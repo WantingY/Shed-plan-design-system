@@ -9,7 +9,7 @@ html {
 	--color-orange-dark: #D76D00;
 
 	--color-blue-grey: #37474f;
-	--color-blue-grey-light: #62727b;
+	--color-blue-grey-light: #DCDCDC;
 	--color-blue-grey-dark: #102027;
 
 	--color-primary-text: #1f2d3d;
@@ -19,6 +19,10 @@ html {
 	--color-box-shadow: 2px 2px 0;
 
 	--button-border: 1.5px solid;
+}
+img {
+	height: auto;
+	max-width: 100%;
 }
 
 /* ==========================================================================
@@ -48,7 +52,6 @@ html {
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-secondary);
 	line-height: .8;
-	margin-top: 15%;
 }
 
 h1 {
@@ -63,7 +66,7 @@ h2 {
 }
 
 h3 {
-	color: var(--color-blue-grey-light);
+	color: var(--color-primary-text);
 	font-size: var(--size-four-up);	
 }
 
@@ -184,6 +187,10 @@ a:hover {
 .heading-level {
 	text-align: center;
 }
+/* hero Component */
+.screenshot img {
+ 	max-width: 100%;
+ }
 
 /* ==========================================================================
  Button component
@@ -298,7 +305,7 @@ a:hover {
 
 .link-button-tertiary:active {
 	background-color: white;
-	border-color: var(--color-blue-grey): 
+	border-color: var(--color-blue-grey); 
 	box-shadow: var(--color-box-shadow) var(--color-blue-grey);
 }
 
@@ -685,9 +692,9 @@ header {
 /* ==========================================================================
  Hero block Component
 ========================================================================== */
-.hero-image {
+.hero {
 	align-items: center;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../wanting_design_system_5-1/images/main_image.png);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(images/main_image.png);
 	background-position: center;
 	background-size: cover;
 	display: flex;
@@ -707,53 +714,46 @@ header {
 	color: var(--color-primary-orange);
  }
 
- .screenshot img {
- 	max-width: 100%;
- }
 
 /* ==========================================================================
  Cards Component
 ========================================================================== */
-/* article */
+/* article /post */
 .card-article {
-	align-items: center;
 	background-color: var(--color-orange-light);
-	display: flex;
-	flex-direction: column;
 	margin: 0;
+	max-width: 18rem;
 }
-.card-article img {
-	max-width: 100%;
-}
-.card-article h3 {
+
+.card-article h5 {
 	border-bottom: 1px solid var(--color-blue-grey);
 	color: var(--color-blue-grey-dark);
 	padding-bottom: 1rem;
 	text-transform: uppercase;	
 }
 .card-article-text {
+	align-items: center;
 	background-color: var(--color-orange-light);
 	color: var(--color-blue-grey);
+	display: flex;
+	flex-direction: column;
 	padding: 1rem;
 }
 .card-article-text small {
 	color: var(--color-blue-grey-light);
 	font-style: italic;
 }
-.card-article h3:hover, .card-article-text p:hover {
+.card-article:hover h3, .card-article-text:hover p {
 	color: var(--color-blue-grey-light);
 }
-.card-article h3:active, .card-article-text p:active {
+.card-article:active h3, .card-article-text:active p {
 	color: var(--color-primary-orange);
 }
 @media (min-width: 600px) {
 	.card-article {
-		align-items:flex-start;
+		align-items:stretch;
 		display: flex;
 		flex-direction: row;
-	}
-	.card-article img {
-		max-height: 25rem;
 	}
 }
 
@@ -761,7 +761,7 @@ header {
 .card-profile {
 	background-color: var(--color-primary-orange);
 	border-radius: .2rem;
-	max-width: 25rem;
+	max-width: 18rem;
 	padding-top: 8rem;
 	position: relative;
 }
@@ -809,11 +809,11 @@ header {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	max-width: 22rem;
+	max-width: 18rem;
 	padding-bottom: 2rem;	
 }
 .card-action img {
-	max-width: 20rem;
+	max-width: 18rem;
 }
 .card-action h3 {
 	color: white;
@@ -822,16 +822,74 @@ header {
 	text-transform: uppercase;
 }
 
-@keyframes shadow-pulse
-{
-  0% {
+@keyframes shadow-pulse {
+	0% {
     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-  }
-  100% {
+	}
+    100% {
     box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
-  }
+	}
 }
 
+/* ==========================================================================
+Card grid layout
+========================================================================== */
+.card-listing {
+	display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+}
+.cards-odd, .cards-even {
+    background-color: var(--color-blue-grey-light);	
+    text-align: center;
+    padding: 1rem;
+}
+.cards-even {
+	background-color: var(--color-orange-light);	
+}
+.card-layout-text h5 {
+	margin: 0;
+	text-transform: uppercase;
+}
+@media (min-width: 680px) {
+	.card-listing div:nth-child(2) {
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
+.card-listing div:nth-child(5) {
+		grid-row-start: 2;
+		grid-row-end: 4;
+		grid-column-start: 3;
+	}
+.card-listing div:nth-child(8) {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+}
+@media (min-width: 1080px) {
+	.main-cards {
+		max-width: 80%;
+	}
+	.card-listing div:nth-child(12) {
+		grid-column-start: 3;
+		grid-column-end: 5;
+	}
+}
+
+/* ==========================================================================
+Card grid layout
+========================================================================== */
+
+.card-callout {
+	display: grid;
+	grid-gap: 1rem;
+}
+@media (min-width: 1080px) {
+	.card-callout {
+		grid-template-columns: repeat(3,18rem);
+		justify-content: center;
+	}
+}
 /* ==========================================================================
  Footer Component
 ========================================================================== */
@@ -872,7 +930,7 @@ body {
 }
 main {
 	margin: auto;
-	max-width: 43rem;
+	max-width: 45rem;
 	padding: 2rem;
 }
 svg {
